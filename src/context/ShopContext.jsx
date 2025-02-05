@@ -75,9 +75,8 @@ const ShopContextProvider = (props) => {
     }
     return totalAmount;
   };
-
   const backendUrl = import.meta.env.VITE_BACKEND_URL;
-  console.log(import.meta.env.VITE_BACKEND_URL);
+
   const getproductsData = async () => {
     try {
       const response = await axios.get(backendUrl + "/api/product/list");
@@ -107,7 +106,7 @@ const ShopContextProvider = (props) => {
     updateQuantity,
     getCartAmount,
     navigate,
-    backendUrl,
+    // backendUrl,
   };
   return (
     <ShopContext.Provider value={value}>{props.children}</ShopContext.Provider>
