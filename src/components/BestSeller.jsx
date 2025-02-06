@@ -10,7 +10,7 @@ const BestSeller = () => {
   useEffect(() => {
     const bestProduct = products.filter((item) => item.bestseller); // Filter products marked as best sellers
     setBestSeller(bestProduct.slice(0, 5)); // Take the first 5 items
-  }, [products]); // Re-run if products change
+  }, []); // Re-run if products change
 
   return (
     <div className="my-10">
